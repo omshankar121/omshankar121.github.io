@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Om Shankar · Workday &amp; AI Engineer</title>
+<meta name="description" content="Principal Engineer in HR technology. Workday integrations, Extend and agentic AI: MCP servers, agent workflows, and enterprise-grade platform engineering.">
+<meta property="og:title" content="Om Shankar · Workday &amp; AI Engineer">
+<meta property="og:description" content="Principal Engineer in HR technology. Deep Workday expertise, hands-on agentic AI engineering.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2334d399'/%3E%3Cstop offset='1' stop-color='%2338bdf8'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%230a0e1a'/%3E%3Ctext x='50' y='68' font-size='52' font-weight='800' text-anchor='middle' fill='url(%23g)' font-family='Segoe UI,sans-serif'%3EOS%3C/text%3E%3C/svg%3E">
+<style>
+:root{
+  --radius:18px;
+  --transition:.3s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"]{
+  --bg:#0a0e1a;
+  --bg2:#0f1526;
+  --card:#131b30;
+  --card-hover:#182240;
+  --border:#243354;
+  --text:#eef2fa;
+  --muted:#8f9db8;
+  --accent:#34d399;
+  --accent2:#38bdf8;
+  --chip:#1a2440;
+  --shadow:0 20px 50px rgba(0,0,0,.45);
+}
+[data-theme="light"]{
+  --bg:#f6f8fc;
+  --bg2:#eef2f9;
+  --card:#ffffff;
+  --card-hover:#ffffff;
+  --border:#dde5f0;
+  --text:#101828;
+  --muted:#5b6b84;
+  --accent:#059669;
+  --accent2:#0284c7;
+  --chip:#eef4fb;
+  --shadow:0 20px 50px rgba(16,24,40,.1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,Roboto,sans-serif;line-height:1.65;transition:background var(--transition),color var(--transition)}
+a{color:var(--accent2);text-decoration:none}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+section{padding:84px 0}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.02em;margin-bottom:10px}
+.sub{color:var(--muted);max-width:660px;margin-bottom:36px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--accent)}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:90;transition:var(--transition)}
+header.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;gap:22px;height:66px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--text);font-size:1.02rem}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent2));box-shadow:0 0 14px var(--accent)}
+.navlinks{display:flex;gap:4px;margin-left:auto}
+.navlinks a{color:var(--muted);font-size:.9rem;padding:7px 13px;border-radius:999px;transition:var(--transition)}
+.navlinks a:hover{color:var(--text)}
+.navlinks a.active{color:var(--text);background:var(--chip)}
+.theme-btn{margin-left:8px;background:var(--chip);border:1px solid var(--border);color:var(--text);width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1rem;transition:var(--transition)}
+.theme-btn:hover{border-color:var(--accent)}
+
+/* hero */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:66px}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;pointer-events:none}
+.blob.a{width:480px;height:480px;background:var(--accent);top:-140px;right:-120px;animation:float 11s ease-in-out infinite}
+.blob.b{width:420px;height:420px;background:var(--accent2);bottom:-160px;left:-120px;animation:float 13s ease-in-out infinite reverse}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(30px,-30px) scale(1.06)}}
+.hero-inner{position:relative}
+.hello{color:var(--accent);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:.85rem;margin-bottom:18px}
+.hero h1{font-size:clamp(2.3rem,6vw,4rem);line-height:1.1;letter-spacing:-.03em;margin-bottom:10px}
+.typed-line{font-size:clamp(1.3rem,3.4vw,2rem);font-weight:700;margin-bottom:24px;min-height:1.4em}
+.typed{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.caret{display:inline-block;width:3px;height:1.05em;background:var(--accent);margin-left:3px;vertical-align:-.15em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero p.intro{color:var(--muted);max-width:620px;font-size:1.08rem;margin-bottom:32px}
+.btnrow{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:12px;font-weight:600;font-size:.95rem;transition:var(--transition);cursor:pointer;border:none}
+.btn-fill{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06121f}
+.btn-fill:hover{transform:translateY(-2px);box-shadow:0 12px 28px color-mix(in srgb,var(--accent) 35%,transparent)}
+.btn-line{border:1px solid var(--border);color:var(--text);background:transparent}
+.btn-line:hover{border-color:var(--accent);transform:translateY(-2px)}
+.socials{display:flex;gap:10px;margin-left:4px}
+.socials a{width:42px;height:42px;border:1px solid var(--border);border-radius:12px;display:grid;place-items:center;color:var(--muted);transition:var(--transition)}
+.socials a:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--muted);font-size:1.4rem;animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* tabs */
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.tab-btn{padding:10px 22px;border-radius:999px;border:1px solid var(--border);background:transparent;color:var(--muted);font-weight:600;font-size:.92rem;cursor:pointer;transition:var(--transition)}
+.tab-btn:hover{color:var(--text)}
+.tab-btn.active{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06121f;border-color:transparent}
+.tab-panel{display:none;animation:fadeup .45s ease}
+.tab-panel.active{display:block}
+@keyframes fadeup{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.panel-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:start}
+.panel-grid p{color:var(--muted);margin-bottom:14px}
+.chipset{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--chip);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:.82rem;color:var(--muted);transition:var(--transition)}
+.chip:hover{color:var(--text);border-color:var(--accent);transform:translateY(-1px)}
+
+/* cards & projects */
+.cardgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;transition:var(--transition)}
+.card:hover{transform:translateY(-6px);background:var(--card-hover);border-color:color-mix(in srgb,var(--accent) 45%,var(--border));box-shadow:var(--shadow)}
+.card h3{font-size:1.08rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.93rem}
+.icon{width:46px;height:46px;border-radius:12px;background:var(--chip);display:grid;place-items:center;font-size:1.3rem;margin-bottom:16px}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+.proj{display:flex;flex-direction:column;gap:10px}
+.proj .cat{font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.proj .tags{margin-top:auto;padding-top:12px}
+.hidden{display:none !important}
+
+/* timeline */
+.timeline{position:relative;margin-top:10px}
+.timeline::before{content:"";position:absolute;left:11px;top:4px;bottom:4px;width:2px;background:var(--border)}
+.titem{position:relative;padding:0 0 18px 44px}
+.titem::before{content:"";position:absolute;left:4px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent);transition:var(--transition)}
+.thead{display:flex;align-items:center;gap:14px;flex-wrap:wrap;cursor:pointer;padding:10px 14px;border-radius:12px;transition:var(--transition)}
+.thead:hover{background:var(--chip)}
+.thead h3{font-size:1.1rem}
+.thead .role{color:var(--accent);font-size:.9rem;font-weight:600}
+.thead .arrow{margin-left:auto;color:var(--muted);transition:transform var(--transition)}
+.titem.open .arrow{transform:rotate(180deg)}
+.tbody{max-height:0;overflow:hidden;transition:max-height .5s ease;padding:0 14px}
+.titem.open .tbody{max-height:600px}
+.tbody ul{list-style:none;padding:8px 0 10px}
+.tbody li{color:var(--muted);font-size:.94rem;padding:5px 0 5px 20px;position:relative}
+.tbody li::before{content:"→";position:absolute;left:0;color:var(--accent)}
+.scope{font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--chip);border:1px solid var(--border);color:var(--accent);border-radius:999px;padding:4px 12px}
+.tagline{font-style:italic;color:var(--muted);font-size:.95rem;padding:2px 14px 8px}
+.hl-row{display:flex;gap:10px;flex-wrap:wrap;padding:4px 0 12px}
+.hl{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,transparent),color-mix(in srgb,var(--accent2) 14%,transparent));border:1px solid var(--border);border-radius:10px;padding:7px 14px;font-size:.82rem;font-weight:600}
+
+/* contact */
+.contact-card{background:var(--card);border:1px solid var(--border);border-radius:24px;padding:56px 40px;text-align:center;position:relative;overflow:hidden}
+.contact-card::before{content:"";position:absolute;inset:-60% 20% auto;height:120%;background:radial-gradient(closest-side,color-mix(in srgb,var(--accent) 16%,transparent),transparent)}
+.contact-card>*{position:relative}
+.contact-card p{color:var(--muted);max-width:540px;margin:0 auto 28px}
+.email-line{font-size:1.05rem;margin-bottom:26px}
+.email-line a{font-weight:700;color:var(--accent)}
+.helpgrid{text-align:left;margin:0 0 30px}
+@media(max-width:860px){.helpgrid{grid-template-columns:1fr}#principles{grid-template-columns:1fr !important}}
+
+footer{border-top:1px solid var(--border);padding:26px 0;color:var(--muted);font-size:.88rem}
+.foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center}
+#toTop{position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;border:1px solid var(--border);background:var(--card);color:var(--text);font-size:1.1rem;cursor:pointer;opacity:0;pointer-events:none;transition:var(--transition);z-index:80}
+#toTop.show{opacity:1;pointer-events:auto}
+#toTop:hover{border-color:var(--accent);transform:translateY(-3px)}
+
+@media(max-width:860px){
+  .cardgrid{grid-template-columns:1fr}
+  .panel-grid{grid-template-columns:1fr}
+  .navlinks{display:none}
+  .hero{min-height:84vh}
+}
+</style>
+</head>
+<body id="top">
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><span class="dot"></span>Om Shankar</a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#work">What I do</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" title="Toggle theme">☀</button>
+  </div>
+</header>
+
+<section class="hero" id="top-hero">
+  <div class="blob a"></div><div class="blob b"></div>
+  <div class="wrap hero-inner">
+    <p class="hello">Hi, I'm Om Shankar</p>
+    <h1>I build Workday integrations<br>and AI agents.</h1>
+    <div class="typed-line"><span class="typed" id="typed"></span><span class="caret"></span></div>
+    <p class="intro">Principal Engineer in HR technology. I lead Workday engineering at a global enterprise, connecting Workday to the systems around it and building agentic AI on top: MCP servers, agent workflows, and Extend apps.</p>
+    <div class="btnrow">
+      <a class="btn btn-fill" href="#projects">View my work</a>
+      <a class="btn btn-line" href="#contact">Get in touch</a>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/om-shankar-rajput-5982a1119/" title="LinkedIn" aria-label="LinkedIn">in</a>
+        <a href="https://github.com/omshankar121" title="GitHub" aria-label="GitHub">&lt;/&gt;</a>
+        <a href="mailto:shankar.om16@gmail.com" title="Email" aria-label="Email">@</a>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">▾</div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <p class="eyebrow reveal">About</p>
+    <h2 class="reveal">Deep Workday expertise. Hands-on AI engineering.</h2>
+    <p class="sub reveal">Most Workday engineers haven't built AI agents. Most AI engineers have never touched an enterprise HR platform. I've done both, and the overlap is exactly where enterprise AI gets hard.</p>
+    <div class="cardgrid">
+      <div class="card reveal">
+        <div class="icon">⚙️</div>
+        <h3>Workday platform engineering</h3>
+        <p>Studio, EIB, Core Connectors, Cloud Connect, PECI/PICOF, REST and SOAP web services, RaaS, WQL, BIRT, Object Transporter, OAuth 2.0/ISU security, and R1/R2 release management across Core HCM, Payroll, Compensation, Benefits, and Absence.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon">🤖</div>
+        <h3>Agentic AI on enterprise systems</h3>
+        <p>AI agent workflows with LangChain, LangGraph, and AWS Bedrock, including enterprise MCP servers, RAG, and tool calling, bringing HR self-service turnaround down from hours to minutes.</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon">🧭</div>
+        <h3>Technical leadership</h3>
+        <p>Leading Workday engineers across global HR technology: solution design, code reviews, mentoring, and delivery standards that keep production stable.</p>
+      </div>
+    </div>
+    <div class="cardgrid reveal" style="grid-template-columns:repeat(4,1fr);margin-top:20px" id="principles">
+      <div class="card" style="padding:20px">
+        <h3 style="font-size:.95rem;color:var(--accent)">Root cause, not patches</h3>
+        <p style="font-size:.86rem">When something breaks, the fix isn't done until it can't happen again.</p>
+      </div>
+      <div class="card" style="padding:20px">
+        <h3 style="font-size:.95rem;color:var(--accent)">Evaluate before adopting</h3>
+        <p style="font-size:.86rem">Especially with AI: prove it works on your problem before it touches production.</p>
+      </div>
+      <div class="card" style="padding:20px">
+        <h3 style="font-size:.95rem;color:var(--accent)">Automate the repetitive</h3>
+        <p style="font-size:.86rem">Engineers should solve new problems, not re-run old ones.</p>
+      </div>
+      <div class="card" style="padding:20px">
+        <h3 style="font-size:.95rem;color:var(--accent)">Build so others can build</h3>
+        <p style="font-size:.86rem">Standards, reviews, and mentoring multiply a team further than any single engineer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="eyebrow reveal">What I do</p>
+    <h2 class="reveal">Three sides of one engineer.</h2>
+    <p class="sub reveal">Pick a tab to explore.</p>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab-btn active" data-tab="t1">Workday platform</button>
+      <button class="tab-btn" data-tab="t2">Agentic AI</button>
+      <button class="tab-btn" data-tab="t3">Leadership</button>
+    </div>
+    <div class="tab-panel active" id="t1">
+      <div class="panel-grid">
+        <div>
+          <p>I design and build the integration landscape that keeps an enterprise running on Workday: complex Studio, EIB, and Core Connector builds across payroll, benefits, identity, and finance systems, each secured with OAuth 2.0/ISU and hardened for R1/R2 releases.</p>
+          <p>Beyond integrations, I build custom Workday Extend apps and Orchestrate flows that take HR processes from days to hours.</p>
+        </div>
+        <div class="chipset">
+          <span class="chip">Workday Studio</span><span class="chip">EIB</span><span class="chip">Core Connectors</span><span class="chip">Cloud Connect</span><span class="chip">PECI/PICOF</span><span class="chip">Workday REST API</span><span class="chip">SOAP web services</span><span class="chip">RaaS</span><span class="chip">WQL</span><span class="chip">BIRT</span><span class="chip">Object Transporter (OX)</span><span class="chip">OAuth 2.0 / ISU</span><span class="chip">Workday Extend</span><span class="chip">Orchestrate</span><span class="chip">Calculated fields</span><span class="chip">BP configuration</span>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel" id="t2">
+      <div class="panel-grid">
+        <div>
+          <p>I build AI agent workflows with LangGraph and LangChain on AWS Bedrock, using RAG for grounded answers and tool calling for real actions. With internal AI teams, I was part of building enterprise MCP servers that expose Workday capabilities as secure tools AI agents can call.</p>
+          <p>On the Workday side, I enable and configure the platform's AI generation: Agent Builder, the Agent System of Record, Agent Gateway's MCP APIs, Illuminate, and Workday Assistant.</p>
+        </div>
+        <div class="chipset">
+          <span class="chip">LangChain</span><span class="chip">LangGraph</span><span class="chip">AWS Bedrock</span><span class="chip">AgentCore</span><span class="chip">Custom MCP servers</span><span class="chip">RAG</span><span class="chip">Tool calling</span><span class="chip">Prompt engineering</span><span class="chip">Embeddings &amp; vector search</span><span class="chip">Agent orchestration</span><span class="chip">Structured outputs</span><span class="chip">Evaluation &amp; guardrails</span><span class="chip">Agent Builder</span><span class="chip">ASOR</span><span class="chip">Agent Gateway (MCP APIs)</span><span class="chip">Illuminate</span><span class="chip">Workday Assistant</span>
+        </div>
+      </div>
+    </div>
+    <div class="tab-panel" id="t3">
+      <div class="panel-grid">
+        <div>
+          <p>As Principal Engineer I lead Workday engineers across global HR technology, owning solution design, code reviews, mentoring, and delivery standards. I run release impact assessments, root-cause analysis, and preventive fixes that keep recurring production issues down.</p>
+          <p>And I carry an automation-first mindset: wherever a process depends on repetitive manual work, I look for a way to engineer it out.</p>
+        </div>
+        <div class="chipset">
+          <span class="chip">Solution design</span><span class="chip">Code reviews</span><span class="chip">Mentoring</span><span class="chip">Delivery standards</span><span class="chip">Root-cause analysis</span><span class="chip">Release management</span><span class="chip">RPA / automation</span><span class="chip">Agile delivery</span><span class="chip">JIRA</span><span class="chip">ServiceNow</span><span class="chip">Git/GitHub</span><span class="chip">Python</span><span class="chip">XSLT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow reveal">Projects</p>
+    <h2 class="reveal">Things I've built and shipped.</h2>
+    <p class="sub reveal">The kind of work I own end to end: from solution design through code review to go-live.</p>
+    <div class="filters reveal">
+      <button class="tab-btn active" data-filter="all">All</button>
+      <button class="tab-btn" data-filter="ai">AI</button>
+      <button class="tab-btn" data-filter="wd">Workday</button>
+    </div>
+    <div class="cardgrid" id="projGrid">
+      <div class="card proj reveal" data-cat="ai">
+        <span class="cat">Agentic AI · MCP</span>
+        <h3>Enterprise MCP servers and agent workflows</h3>
+        <p>MCP servers that expose Workday capabilities as secure tools AI agents can call, with agent workflows built on LangGraph and Bedrock using RAG and tool calling. HR self-service turnaround: hours to minutes.</p>
+        <div class="chipset tags"><span class="chip">LangGraph</span><span class="chip">AWS Bedrock</span><span class="chip">MCP</span><span class="chip">RAG</span></div>
+      </div>
+      <div class="card proj reveal" data-cat="ai">
+        <span class="cat">Workday AI platform</span>
+        <h3>Workday's AI stack, enabled and configured</h3>
+        <p>Enabling and configuring Workday agents through Agent Builder and ASOR, connecting via Agent Gateway's MCP APIs, and evaluating Illuminate and Workday Assistant for governed enterprise rollout.</p>
+        <div class="chipset tags"><span class="chip">Agent Builder</span><span class="chip">ASOR</span><span class="chip">Agent Gateway</span><span class="chip">Illuminate</span></div>
+      </div>
+      <div class="card proj reveal" data-cat="wd">
+        <span class="cat">Workday Extend</span>
+        <h3>Custom Extend apps and orchestrations</h3>
+        <p>Where Workday's standard features stop, Extend begins. Custom apps and Orchestrate flows that digitize manual HR processes end to end, cutting turnaround from days to hours.</p>
+        <div class="chipset tags"><span class="chip">Workday Extend</span><span class="chip">Orchestrate</span><span class="chip">Workday APIs</span><span class="chip">BP configuration</span></div>
+      </div>
+      <div class="card proj reveal" data-cat="ai">
+        <span class="cat">RAG · LLMs</span>
+        <h3>RAG knowledge assistant over HR content</h3>
+        <p>Grounded LLM answers in enterprise HR knowledge using retrieval, embeddings, and vector search, so employees get accurate, sourced responses instead of generic model output.</p>
+        <div class="chipset tags"><span class="chip">RAG</span><span class="chip">Embeddings</span><span class="chip">LangChain</span></div>
+      </div>
+      <div class="card proj reveal" data-cat="ai">
+        <span class="cat">Automation · Gen AI</span>
+        <h3>AI-assisted process automation</h3>
+        <p>RPA combined with Gen AI capabilities like summarization and intelligent document handling, automating repetitive HR operations end to end, not just the easy steps.</p>
+        <div class="chipset tags"><span class="chip">RPA</span><span class="chip">Gen AI</span><span class="chip">Python</span></div>
+      </div>
+      <div class="card proj reveal" data-cat="wd">
+        <span class="cat">Integrations</span>
+        <h3>Integration platform at scale</h3>
+        <p>A large portfolio of production Studio, EIB, and Core Connector integrations spanning payroll, benefits, identity, and finance systems, secured with OAuth 2.0/ISU.</p>
+        <div class="chipset tags"><span class="chip">Workday Studio</span><span class="chip">EIB</span><span class="chip">Core Connectors</span></div>
+      </div>
+      <div class="card proj reveal" data-cat="wd">
+        <span class="cat">Integrations</span>
+        <h3>Downstream vendor feed ecosystem</h3>
+        <p>The feeds that carry HR data out of Workday reliably: payroll vendors via PECI/PICOF, benefits carriers, identity platforms, and finance systems, each with its own contract.</p>
+        <div class="chipset tags"><span class="chip">PECI/PICOF</span><span class="chip">SFTP / APIs</span><span class="chip">XSLT</span></div>
+      </div>
+      <div class="card proj reveal" data-cat="wd">
+        <span class="cat">Reliability</span>
+        <h3>Integration monitoring and self-healing</h3>
+        <p>Proactive monitoring, alerting, and retry patterns around critical integrations, so failures surface before the business notices and most recover without a human touching them.</p>
+        <div class="chipset tags"><span class="chip">Alerting</span><span class="chip">Error handling</span><span class="chip">Preventive fixes</span></div>
+      </div>
+      <div class="card proj reveal" data-cat="wd">
+        <span class="cat">Modernization</span>
+        <h3>Legacy integration modernization</h3>
+        <p>Moving aging integrations to current patterns: SOAP to REST, legacy auth to OAuth 2.0/ISU, and hand-maintained jobs to governed Studio builds that survive releases cleanly.</p>
+        <div class="chipset tags"><span class="chip">REST API</span><span class="chip">OAuth 2.0</span><span class="chip">Workday Studio</span></div>
+      </div>
+      <div class="card proj reveal" data-cat="wd">
+        <span class="cat">Implementations</span>
+        <h3>Go-live data conversion and cutover</h3>
+        <p>On full Workday implementations, the part that makes or breaks go-live: converting legacy HR data, validating it against business rules, and sequencing cutover so day one works.</p>
+        <div class="chipset tags"><span class="chip">Data conversion</span><span class="chip">EIB</span><span class="chip">Validation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--bg2)">
+  <div class="wrap">
+    <p class="eyebrow reveal">Experience</p>
+    <h2 class="reveal">Nine-plus years of complex, production-grade work.</h2>
+    <p class="sub reveal">Not maintenance. Not support. Systems that enterprises depend on every payday, every go-live, every release. Click a role to expand.</p>
+    <div class="timeline">
+      <div class="titem open reveal">
+        <div class="thead" role="button" tabindex="0">
+          <h3>Autodesk</h3><span class="role">Principal Engineer · Workday</span><span class="scope">Global enterprise · current</span><span class="arrow">▾</span>
+        </div>
+        <div class="tagline">Where enterprise Workday meets agentic AI.</div>
+        <div class="tbody">
+          <div class="hl-row"><span class="hl">Platform ownership</span><span class="hl">Agentic AI</span><span class="hl">Technical leadership</span></div>
+          <ul>
+            <li>Own the architecture of a business-critical integration landscape that moves HR data across payroll, benefits, identity, and finance systems, built to survive peak loads and R1/R2 releases</li>
+            <li>Lead Workday engineers across global HR technology: solution design, code reviews, mentoring, and the delivery standards the team builds against</li>
+            <li>Engineered Workday Extend apps and orchestrations with Gen AI embedded in live HR workflows, collapsing processes from days to hours</li>
+            <li>Part of building enterprise MCP servers with internal AI teams, turning Workday capabilities into secure tools AI agents can call</li>
+            <li>Build AI agent workflows with LangGraph, LangChain, and AWS Bedrock, where RAG grounds the answers and tool calling executes real actions</li>
+            <li>At the front of Workday's AI rollout: enabled and configured agents via Agent Builder, ASOR, and Agent Gateway, driving adoption across HR technology domains</li>
+            <li>The engineer who finds the root cause: release impact assessments and preventive fixes that keep recurring production issues off the board</li>
+          </ul>
+        </div>
+      </div>
+      <div class="titem reveal">
+        <div class="thead" role="button" tabindex="0">
+          <h3>Deloitte</h3><span class="role">Workday Consultant</span><span class="scope">High-stakes implementations</span><span class="arrow">▾</span>
+        </div>
+        <div class="tagline">Go-lives where failure was not an option.</div>
+        <div class="tbody">
+          <div class="hl-row"><span class="hl">End-to-end delivery</span><span class="hl">Client-facing</span><span class="hl">Regulated industries</span></div>
+          <ul>
+            <li>Delivered full Workday implementations for healthcare and semiconductor clients, where data mistakes carry regulatory and operational consequences</li>
+            <li>Designed and built complex integrations end to end, from requirements workshops through architecture, build, testing, and go-live</li>
+            <li>Owned data conversion and cutover sequencing, the make-or-break phase of every implementation</li>
+            <li>Trusted directly by clients on solution decisions, earning multiple formal client appreciations</li>
+          </ul>
+        </div>
+      </div>
+      <div class="titem reveal">
+        <div class="thead" role="button" tabindex="0">
+          <h3>Accenture</h3><span class="role">Workday Developer</span><span class="scope">Global clients</span><span class="arrow">▾</span>
+        </div>
+        <div class="tagline">Enterprise HR data at global scale, from day one.</div>
+        <div class="tbody">
+          <div class="hl-row"><span class="hl">Integration engineering</span><span class="hl">HCM foundations</span></div>
+          <ul>
+            <li>Built and maintained Workday integrations for large global clients across multiple HCM domains, working to enterprise standards from the first year</li>
+            <li>Delivered compensation solutions and core HCM data work on systems serving workforces across countries and time zones</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <p class="eyebrow reveal">Education &amp; certifications</p>
+    <h2 class="reveal">Credentials.</h2>
+    <div class="cardgrid" style="grid-template-columns:repeat(2,1fr);margin-top:26px">
+      <div class="card reveal">
+        <div class="icon">🎓</div>
+        <h3>Education</h3>
+        <p><strong>Bachelor of Engineering, Electronics &amp; Communication</strong><br>Dayananda Sagar College of Engineering, Bangalore · 2013 – 2017</p>
+      </div>
+      <div class="card reveal">
+        <div class="icon">📜</div>
+        <h3>Certifications</h3>
+        <p><strong>Workday HCM</strong> · certified<br><strong>Workday Integrations</strong> · certified</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-card reveal">
+      <p class="eyebrow" style="justify-content:center">Let's connect</p>
+      <h2>Need someone who knows Workday and builds AI?</h2>
+      <p>I'm always open to connecting, whether your organization is navigating Workday and enterprise AI, or you're building your own path into this space.</p>
+      <div class="cardgrid helpgrid">
+        <div class="card">
+          <div class="icon">🧭</div>
+          <h3>Workday mentoring</h3>
+          <p>Guidance for engineers entering or growing in the Workday ecosystem: where to start, what to learn, and how the career path really works.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🔗</div>
+          <h3>Integrations &amp; Extend</h3>
+          <p>Happy to talk through integration patterns, Extend approaches, and the hard problems that documentation never covers.</p>
+        </div>
+        <div class="card">
+          <div class="icon">🤖</div>
+          <h3>AI in the enterprise</h3>
+          <p>Comparing notes on agentic AI, MCP, and what it actually takes to make agents useful on enterprise systems.</p>
+        </div>
+      </div>
+      <p class="email-line"><a href="mailto:shankar.om16@gmail.com">shankar.om16@gmail.com</a></p>
+      <div class="btnrow" style="justify-content:center">
+        <a class="btn btn-fill" href="mailto:shankar.om16@gmail.com">Email me</a>
+        <a class="btn btn-line" href="https://www.linkedin.com/in/om-shankar-rajput-5982a1119/">LinkedIn</a>
+        <a class="btn btn-line" href="https://github.com/omshankar121">GitHub</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>© 2026 Om Shankar</span>
+    <span><a href="https://www.linkedin.com/in/om-shankar-rajput-5982a1119/">LinkedIn</a> · <a href="https://github.com/omshankar121">GitHub</a></span>
+  </div>
+</footer>
+
+<button id="toTop" title="Back to top">↑</button>
+
+<script>
+// typing effect
+const phrases=["Workday integrations that don't break.","Extend apps that ship.","MCP servers for AI agents.","Agent workflows that act.","Automation that removes busywork."];
+const typedEl=document.getElementById('typed');
+let pi=0,ci=0,del=false;
+(function type(){
+  const p=phrases[pi];
+  typedEl.textContent=p.slice(0,ci);
+  if(!del){ci++;if(ci>p.length){del=true;setTimeout(type,1700);return}}
+  else{ci--;if(ci===0){del=false;pi=(pi+1)%phrases.length}}
+  setTimeout(type,del?28:55);
+})();
+
+// theme toggle
+const themeBtn=document.getElementById('themeBtn');
+themeBtn.onclick=()=>{
+  const r=document.documentElement;
+  const dark=r.getAttribute('data-theme')==='dark';
+  r.setAttribute('data-theme',dark?'light':'dark');
+  themeBtn.textContent=dark?'☾':'☀';
+};
+
+// header scroll + back to top
+const hdr=document.getElementById('hdr'),toTop=document.getElementById('toTop');
+addEventListener('scroll',()=>{
+  hdr.classList.toggle('scrolled',scrollY>30);
+  toTop.classList.toggle('show',scrollY>500);
+});
+toTop.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+
+// reveal on scroll
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// active nav link
+const sections=[...document.querySelectorAll('section[id]')];
+const links=[...document.querySelectorAll('#navlinks a')];
+const io2=new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){
+    links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id));
+  }
+}),{rootMargin:'-40% 0px -55% 0px'});
+sections.forEach(s=>io2.observe(s));
+
+// tabs
+document.querySelectorAll('.tabs .tab-btn').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.tabs .tab-btn').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  document.getElementById(b.dataset.tab).classList.add('active');
+});
+
+// project filters
+document.querySelectorAll('.filters .tab-btn').forEach(b=>b.onclick=()=>{
+  document.querySelectorAll('.filters .tab-btn').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');
+  const f=b.dataset.filter;
+  document.querySelectorAll('#projGrid .proj').forEach(c=>{
+    c.classList.toggle('hidden',f!=='all'&&c.dataset.cat!==f);
+  });
+});
+
+// timeline accordion
+document.querySelectorAll('.thead').forEach(h=>{
+  const toggle=()=>h.parentElement.classList.toggle('open');
+  h.onclick=toggle;
+  h.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}};
+});
+</script>
+</body>
+</html>
